@@ -1,0 +1,134 @@
+:root {
+  --primary-color: #346739;
+  --bar-color: #2ecc71;
+  --reset: #ff4444;
+  --hoveredReset: #cc0000;
+  --dark-white: #d9d9d9;
+  --lighterDark-white: rgb(238, 225, 225);
+}
+
+body {
+  font-family: Poppins, sans-serif;
+  margin: 0;
+  padding: 0;
+}
+.navbar {
+  width: 100vw;
+  height: 68px;
+  background-color: var(--primary-color);
+  display: flex;
+  justify-content: space-between;
+}
+.logo {
+  margin: 0;
+  padding: 0;
+  color: var(--lighterDark-white);
+}
+.logo-container {
+  padding: px;
+  font-size: large;
+  width: 13%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.navbar-right {
+  display: flex;
+  margin-left: auto;
+  padding: 20px;
+  align-items: center;
+}
+
+.main-container {
+  margin-left: 10px;
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  color: var(--lighterDark-white);
+}
+
+.footer {
+  width: 100vw;
+  height: 75px;
+  background-color: var(--primary-color);
+  color: var(--dark-white);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.whole-container {
+  display: flex;
+  height: 100vh;
+  flex-direction: column;
+}
+.whole-container::before {
+  content: "";
+  position: absolute;
+  top: 0; 
+  left: 0; 
+  right: 0; 
+  bottom: 0;
+  background-image: url('./assets/field-background.jpg');
+  background-size: cover;
+  background-position: center;
+  filter: blur(5px); 
+  z-index: -1;
+}
+
+.login-div
+{
+    background-color: var(--primary-color);
+    padding: 10px;
+    height: 40vh;
+    width: 25vw;
+    border-radius: 5px;
+    box-shadow: 10px 10px 5px black;
+    color: var(--dark-white);
+    display: flex;
+    flex-direction: column;
+}
+.login-div:hover
+{
+    transform: scale(1.1);
+}
+.login-div h2{
+    text-align: center;
+}
+
+.login-div .login-warn{
+    color: var(--lighterDark-white);
+    margin-top: auto;
+    text-align: center;
+}
+.login-div hr{
+    width: 100%;
+}
+.username-label
+{
+    margin: 0;
+    padding: 0;
+    text-align: center;
+}
+#loginForm
+{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+#loginForm input{
+    width: 300px;
+    height: 30px;
+}
+#loginForm button{
+    background-color: var(--lighterDark-white);
+    width: 300px;
+    height: 30px;
+    border-radius: 4px;
+    border: none;
+
+}
+

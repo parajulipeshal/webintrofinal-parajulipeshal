@@ -1,0 +1,116 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="dashboard.css" />
+    <script type="module" src="ui.js"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Roboto+Condensed:ital,wght@0,100..900;1,100..900&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+    />
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"></script>
+    <title>Smart Forcaster Dashboard</title>
+  </head>
+  <body>
+    <div class="whole-container">
+      <nav>
+        <div class="navbar">
+          <div class="logo-container">
+            <h3 class="logo">Smart Forcaster</h3>
+          </div>
+          <div class="navbar-right">
+            <img src="./assets/user1.png" alt="usericon" />
+          </div>
+        </div>
+      </nav>
+
+      <div class="main-container" id="dashboardPage">
+        <div class="buttoned-title">
+          <h1 id="dashboardTitle"></h1>
+          <div class="user-button">
+            <button id="addCrop">Add Crop</button>
+            <button id="logoutButton">Logout</button>
+          </div>
+        </div>
+        <div class="dashboard-bottom">
+          <div id="cropsDisplay">
+            <h1>Your Crops</h1>
+            <p>Filter by:</p>
+            <div class="filters-container">
+              <label
+                >Crop name: <input id="filterCropName" type="text"
+              /></label>
+              <label>
+                Crop quantity: <input id="filterQuantity" type="number"
+              /></label>
+            </div>
+            <div id="cardsContainer" class="cards-container"></div>
+          </div>
+        </div>
+      </div>
+
+      <div id="popup-form" class="popup-form">
+        <div class="form">
+          <div class="closer">
+            <button class="close-button">
+              <img src="./assets/close.png" alt="close" class="form-close" />
+            </button>
+          </div>
+          <h2>Add New Crop</h2>
+          <form id="addCropForm">
+            <label
+              >Crop Type:
+              <input type="text" id="cropType" name="cropType" required
+            /></label>
+            <label
+              >Planting date:
+              <input type="date" id="plantingDate" name="plantingDate" required
+            /></label>
+            <label
+              >Field Location:
+              <input
+                type="text"
+                id="fieldLocation"
+                name="fieldLocation"
+                placeholder="Field Location"
+                required
+            /></label>
+            <label
+              >Quantity:
+              <input
+                type="number"
+                id="quantity"
+                name="quantity"
+                placeholder="Quantity"
+                required
+            /></label>
+            <label
+              >Watering Frequency (Days):
+              <input
+                type="number"
+                id="wateringFrequencyDays"
+                name="wateringFrequencyDays"
+                placeholder="Watering Frequency (Days)"
+            /></label>
+            <label>Picture: <input type="file" id="imageInput" /></label>
+            <div class="form-buttons">
+              <button type="submit">Add Crop</button>
+              <button type="reset">Reset</button>
+            </div>
+          </form>
+        </div>
+      </div>
+      <span id="null-check"></span>
+      <footer class="footer">
+        <span>Smart Forcaster | Made for Farmers</span>
+      </footer>
+    </div>
+  </body>
+</html>
